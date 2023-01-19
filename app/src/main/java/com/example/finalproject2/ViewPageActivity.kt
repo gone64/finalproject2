@@ -23,7 +23,7 @@ class ViewPageActivity : AppCompatActivity() {
                     tab.text = "Add Photo"
                 }
                 1->{
-                    tab.text = "Gallery"
+                    tab.text = "Rate Us"
                 }
             }
         }.attach()
