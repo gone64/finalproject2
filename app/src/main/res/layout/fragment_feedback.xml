@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackFragment">
+
+    <EditText
+        android:id="@+id/feedback"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:hint="Enter Your FeedBack"
+        android:inputType="text"
+        android:drawableStart="@drawable/costom_feedback_icon"
+        android:drawablePadding="12sp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:background="@drawable/costom_input"
+        app:layout_constraintStart_toStartOf="@+id/Rate"
+        app:layout_constraintTop_toBottomOf="@id/Rate" />
+
+    <TextView
+        android:id="@+id/Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Rate Us"
+        android:fontFamily="@font/alata"
+        android:textColor="#598bbd"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/score"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Score from 1 to 10"
+        android:inputType="number"
+        android:drawableStart="@drawable/costom_star_icon"
+        android:drawablePadding="12sp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:background="@drawable/costom_input"
+        app:layout_constraintStart_toStartOf="@+id/feedback"
+        app:layout_constraintTop_toBottomOf="@id/feedback" />
+
+    <TextView
+        android:id="@+id/AddResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ADD RESULT"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/btn_bg"
+        android:paddingHorizontal="25sp"
+        android:paddingVertical="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@id/score" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
