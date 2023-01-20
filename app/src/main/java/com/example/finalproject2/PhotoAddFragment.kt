@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DatabaseReference
@@ -58,11 +59,22 @@ class PhotoAddFragment : Fragment(R.layout.fragment_photo_add) {
         val urll = link.text.toString()
         val namee = name.text.toString()
         val photoId = dbref.push().key!!
+
         val photo = PhotoModel(urll,namee,photoId)
+        if(urll.isEmpty()){
+            link.error = "Enter Photo Link"
+        }
+        if (namee.isEmpty()){
+            name.error = "Enter Photo Name"
+        }
+
+
+
         if(urll.isNotEmpty() && namee.isNotEmpty()){
             dbref.child(photoId).setValue(photo).addOnCompleteListener{
                 link.text.clear()
                 name.text.clear()
+                Toast.makeText(context, "Successfully Added", Toast.LENGTH_SHORT).show()
 
             }
         }

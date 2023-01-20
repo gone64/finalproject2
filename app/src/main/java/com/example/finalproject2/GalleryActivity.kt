@@ -24,7 +24,6 @@ class GalleryActivity : AppCompatActivity() {
         binding.recycler1.adapter = adapter
         databaseReference = FirebaseDatabase.getInstance().getReference("Gallery")
         eventListener = databaseReference!!.addValueEventListener(object  : ValueEventListener{
-            @SuppressLint("NotifyDataSetChanged")
             override fun onDataChange(snapshot: DataSnapshot) {
                 dataList.clear()
                 for (photoSnapshot in snapshot.children){
