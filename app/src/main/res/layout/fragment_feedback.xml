@@ -28,7 +28,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
         android:text="Rate Us"
-        android:fontFamily="@font/alata"
         android:textColor="#598bbd"
         android:textSize="40sp"
         android:textStyle="bold"
